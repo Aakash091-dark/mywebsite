@@ -9,6 +9,7 @@ const ProjectsSection = dynamic(() => import("../components/ProjectsSection"), {
 const DataSection = dynamic(() => import("../components/DataSection"), { ssr: false });
 const WriterSection = dynamic(() => import("../components/WriterSection"), { ssr: false });
 const MusicSection = dynamic(() => import("../components/MusicSection"), { ssr: false });
+const CertificatesSection = dynamic(() => import("../components/CertificatesSection"), { ssr: false });
 const ContactSection = dynamic(() => import("../components/ContactSection"), { ssr: false });
 
 export default function Home() {
@@ -109,6 +110,9 @@ export default function Home() {
     </AnimatedSection>
     <AnimatedSection id="musician" glowColor="rgba(236, 72, 153, 0.5)">
       <MusicSection />
+    </AnimatedSection>
+    <AnimatedSection id="certificates" glowColor="rgba(99, 102, 241, 0.5)">
+      <CertificatesSection />
     </AnimatedSection>
     <AnimatedSection id="contact">
       <ContactSection />

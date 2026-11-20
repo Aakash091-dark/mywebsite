@@ -41,16 +41,13 @@ export default function EasterEggs() {
 
     switch (cmd) {
       case "help":
-        newOutput.push("Commands: about, projects, music, clear");
+        newOutput.push("Commands: about, projects, clear");
         break;
       case "about":
-        newOutput.push("Aakash: AI Engineer & Data Analyst crafting intelligent systems.");
+        newOutput.push("Aakash: AI Engineer crafting intelligent systems.");
         break;
       case "projects":
         newOutput.push("Viewing 4 featured projects. Type 'view project' for more.");
-        break;
-      case "music":
-        newOutput.push("Playing void.mp4... 🎵");
         break;
       case "clear":
         setTerminalOutput([]);

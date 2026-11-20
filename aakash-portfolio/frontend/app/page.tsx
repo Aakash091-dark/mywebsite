@@ -5,17 +5,16 @@ import dynamic from "next/dynamic";
 import AnimatedSection from "../components/AnimatedSection";
 
 const NeuralBackground = dynamic(() => import("../components/NeuralBackground"), { ssr: false });
+const ExperienceSection = dynamic(() => import("../components/ExperienceSection"), { ssr: false });
 const ProjectsSection = dynamic(() => import("../components/ProjectsSection"), { ssr: false });
-const DataSection = dynamic(() => import("../components/DataSection"), { ssr: false });
 const WriterSection = dynamic(() => import("../components/WriterSection"), { ssr: false });
-const MusicSection = dynamic(() => import("../components/MusicSection"), { ssr: false });
 const CertificatesSection = dynamic(() => import("../components/CertificatesSection"), { ssr: false });
 const ContactSection = dynamic(() => import("../components/ContactSection"), { ssr: false });
 
 export default function Home() {
   return (
     <>
-    <div className="relative min-h-screen flex items-center justify-center bg-transparent text-white overflow-hidden font-sans perspective-1000">
+    <div id="home" className="relative min-h-screen flex items-center justify-center bg-transparent text-white overflow-hidden font-sans perspective-1000">
       <div className="fixed inset-0 z-[-1] bg-[#050510]">
         <NeuralBackground />
       </div>
@@ -66,18 +65,17 @@ export default function Home() {
         </div>
 
         {/* Identity Navigation - Upgraded, Floating Pattern, Highly Visible */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 w-full max-w-4xl mt-24 pt-12 mx-auto relative">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 w-full max-w-3xl mt-24 pt-12 mx-auto relative">
           
           {/* Subtle connecting line behind */}
           <div className="absolute top-1/2 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-y-1/2 hidden md:block"></div>
 
-          {['AI Engineer', 'Data Analyst', 'Writer', 'Musician'].map((role, index) => {
+          {['Experience', 'AI Engineer', 'Writer'].map((role, index) => {
             // Create a staggered floating pattern
             const floatClasses = [
               "animate-float",
               "animate-float-delayed",
               "animate-float-slow",
-              "animate-float",
             ];
             
             return (
@@ -99,17 +97,14 @@ export default function Home() {
       </main>
     </div>
     
+    <AnimatedSection id="experience-sec" glowColor="rgba(168, 85, 247, 0.5)">
+      <ExperienceSection />
+    </AnimatedSection>
     <AnimatedSection id="ai-engineer-sec" glowColor="rgba(59, 130, 246, 0.5)">
       <ProjectsSection />
     </AnimatedSection>
-    <AnimatedSection id="data-analyst" glowColor="rgba(168, 85, 247, 0.5)">
-      <DataSection />
-    </AnimatedSection>
     <AnimatedSection id="writer" glowColor="rgba(245, 158, 11, 0.5)">
       <WriterSection />
-    </AnimatedSection>
-    <AnimatedSection id="musician" glowColor="rgba(236, 72, 153, 0.5)">
-      <MusicSection />
     </AnimatedSection>
     <AnimatedSection id="certificates" glowColor="rgba(99, 102, 241, 0.5)">
       <CertificatesSection />

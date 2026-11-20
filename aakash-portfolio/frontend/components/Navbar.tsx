@@ -5,10 +5,9 @@ import { motion, useScroll } from "framer-motion";
 
 const navItems = [
   { name: "Home", href: "#home" },
+  { name: "Experience", href: "#experience" },
   { name: "AI Engineer", href: "#ai-engineer" },
-  { name: "Data Analyst", href: "#data-analyst" },
   { name: "Writer", href: "#writer" },
-  { name: "Musician", href: "#musician" },
   { name: "Certifications", href: "#certificates" },
   { name: "Contact", href: "#contact" },
 ];
